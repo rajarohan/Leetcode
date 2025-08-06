@@ -5,9 +5,10 @@ def allsubseq(a):
         if i == n:
             ans.append(ds[:])
             return
-        ds.append(a[i])
-        bt(i + 1, ds)
-        ds.pop()
+        if a[i] < a[i + 1]:
+            ds.append(a[i])
+            bt(i + 1, ds)
+            ds.pop()
         bt(i + 1, ds)
     bt(0, [])
     return ans
