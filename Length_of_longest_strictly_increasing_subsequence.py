@@ -4,6 +4,7 @@ def allsubseq(a):
     def bt(i, ds):
         if i == n:
             ans.append(ds[:])
+            return
         ds.append(a[i])
         bt(i + 1, ds)
         ds.pop()
