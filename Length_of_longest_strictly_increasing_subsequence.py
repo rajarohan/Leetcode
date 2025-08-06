@@ -25,4 +25,20 @@ def longest_Subsequence(a):
         if is_increasing(i):
             maxi = max(maxi, len(i))
     return maxi
-      
+#Memoization
+def longest_Subsequence(a):
+    n = len(a)
+    def dp(i, prev):
+        if i == n:
+            return 0
+        
+        notT = dp(i + 1, prev)
+        
+        T = 0
+        if prev == -1 or a[i] > a[prev]:
+            T = 1 + dp(i + 1, i)
+        
+        return max(T, notT)
+
+    return dp(0, -1)
+print(longest_Subsequence([1, 3, 2, 4, 0, 9]))
