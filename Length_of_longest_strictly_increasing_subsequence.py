@@ -1,3 +1,4 @@
+#Brute-Force
 def allsubseq(a):
     n = len(a)
     ans = []
