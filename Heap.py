@@ -19,5 +19,5 @@ a = [10, 20, 15, 30, 40, 5, 8]
 
 heapq.heapify(a)
 
-print("Heap array:", a)
+print(a)
 find_right_child(2, a)
